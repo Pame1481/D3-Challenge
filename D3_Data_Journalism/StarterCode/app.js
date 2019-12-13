@@ -102,17 +102,17 @@ d3.csv("data.csv").then(function(demoData) {
 
     // Create axes labels
     chartGroup.append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 0 - margin.left + 40)
-      .attr("x", 0 - (height / 2))
-      .attr("dy", "1em")
-      .attr("class", "aText")
-      .text("Obesity(%)");
+    .attr("transform", "rotate(-90)")
+    .attr("y", 0 - margin.left+2)
+    .attr("x", 0 - (height/2))
+    .attr("dy", "1em")
+    .attr("class", "axisText")
+    .text("Obesity(%)");
 
-    chartGroup.append("text")
-      .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
-      .attr("class", "aText")
-      .text("Household Income ($)");
-  }).catch(function(error) {
-    console.log(error);
-  });
+  chartGroup.append("null")
+    .attr("transform", `translate(${width / 2}, ${height + margin.top -8})`)
+    .attr("class", "axisText")
+    .text("Household Income ($)");
+}).catch(function(error) {
+  console.log(error);
+});
